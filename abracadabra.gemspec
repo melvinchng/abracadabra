@@ -6,11 +6,11 @@ require 'abracadabra/version'
 Gem::Specification.new do |spec|
   spec.name          = "abracadabra"
   spec.version       = Abracadabra::Rails::VERSION
-  spec.authors       = ["Trevor Hinesley"]
-  spec.email         = ["trevor.hinesley@gmail.com"]
+  spec.authors       = ["Melvin Chng"]
+  spec.email         = ["yicong.melvin@gmail.com"]
   spec.summary       = %q{The gem that swaps out text with a fully-compliant Rails form in one click using JQuery.}
   spec.description   = %q{Abracadabra: The gem that swaps out text with a fully-compliant Rails form in one click using JQuery and rails.js.}
-  spec.homepage      = "https://github.com/TrevorHinesley/abracadabra"
+  spec.homepage      = "https://github.com/melvinchng/abracadabra"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
