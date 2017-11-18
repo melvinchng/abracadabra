@@ -157,17 +157,36 @@ $(function() {
           remote = ((link.data("remote") == true) ? " data-remote=\"true\"" : "");
   
           /* Check if button classes have been manually overridden elsewhere */
-          if(typeof abracadabraSubmitIcon == "undefined") {
-            abracadabraSubmitIcon = "save";
+          if (typeof abracadabraFramework == "undefined") {
+            /* Bootstrap */
+            if(typeof abracadabraSubmitIcon == "undefined") {
+              abracadabraSubmitIcon = "fa fa-check";
+            }
+    
+            if(typeof abracadabraCancelIcon == "undefined") {
+              abracadabraCancelIcon = "fa fa-times";
+            }
+    
+            if(typeof abracadabraDeleteIcon == "undefined") {
+              abracadabraDeleteIcon = "fa fa-times-circle-o";
+            }
+          } else {
+            /* Material Design */
+            if (abracadabraFramework == "MaterialDesign") {
+              if(typeof abracadabraSubmitIcon == "undefined") {
+                abracadabraSubmitIcon = "save";
+              }
+      
+              if(typeof abracadabraCancelIcon == "undefined") {
+                abracadabraCancelIcon = "cancel";
+              }
+      
+              if(typeof abracadabraDeleteIcon == "undefined") {
+                abracadabraDeleteIcon = "delete";
+              }
+            }
           }
-  
-          if(typeof abracadabraCancelIcon == "undefined") {
-            abracadabraCancelIcon = "cancel";
-          }
-  
-          if(typeof abracadabraDeleteIcon == "undefined") {
-            abracadabraDeleteIcon = "delete";
-          }
+
           /* /Check if button classes have been manually overridden elsewhere */
   
           /* AJAX? */
@@ -220,7 +239,13 @@ $(function() {
           if(link.data("buttonless") == true) {
             buttons = "";
           } else {
-        buttons = "<button type=\"submit\" class=\"btn btn-info btn-xs abracadabra-submit\"><i class=\"material-icons\">" + abracadabraSubmitIcon + "</i></a></button><button type=\"button\" class=\"btn btn-info btn-xs abracadabra-cancel\"><i class=\"material-icons\">" + abracadabraCancelIcon + "</i></button>";
+            if (typeof abracadabraFramework == "undefined") {
+              buttons = "<button type=\"submit\" class=\"btn btn-primary abracadabra-submit\"><i class=\"" + abracadabraSubmitIcon + "\"></i></button><button type=\"button\" class=\"btn abracadabra-cancel\"><i class=\"" + abracadabraCancelIcon + "\"></i></button>";
+            } else {
+              if (abracadabraFramework == "MaterialDesign") {
+                buttons = "<button type=\"submit\" class=\"btn btn-info btn-xs abracadabra-submit\"><i class=\"material-icons\">" + abracadabraSubmitIcon + "</i></a></button><button type=\"button\" class=\"btn btn-info btn-xs abracadabra-cancel\"><i class=\"material-icons\">" + abracadabraCancelIcon + "</i></button>";
+              }
+            }
           }
           /* /Show buttons? */
   

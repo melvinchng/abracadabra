@@ -1,6 +1,6 @@
-# Abracadabra Material Design
+# Abracadabra for Bootstrap and Material Design
 
-The gem that swaps out text with a fully-compliant Rails form in one click. The button of this gem is replaced from Bootstrap to Material Design.
+The gem that swaps out text with a fully-compliant Rails form in one click. 
 
 Much of the concepts and html mark-up were taken from the awesome [x-editable](http://vitalets.github.io/x-editable/) plugin and the Rails version of this, [x-editable-rails](https://github.com/werein/x-editable-rails). However, this was written from the ground up and uses fully Rails-compliant forms without hacking into x-editable's core files or overriding them.
 
@@ -127,6 +127,9 @@ Abracadabra allows some customization. If you would like to change what icon cla
 In any Javascript file that loads **BEFORE** abracadabra's Javascript file that you required above, change any/all of the following variables to suit your project's needs:
 
 ```javascript
+
+abracadabraFramework = "MaterialDesign"; // for Material Design
+
 abracadabraSubmitIcon = "fa fa-check"; // default
 
 abracadabraCancelIcon = "fa fa-times"; // default
@@ -164,7 +167,7 @@ If no selector is passed, `.abracadabra` is used. It's highly recommended to pas
 
 Any other ideas, feel free to contribute!
 
-1. Fork it ( http://github.com/TrevorHinesley/abracadabra/fork )
+1. Fork it ( http://github.com/melvinchng/abracadabra/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
