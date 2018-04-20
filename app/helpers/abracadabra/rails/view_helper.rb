@@ -29,6 +29,10 @@ module Abracadabra
           remote = true
         end
 
+        unless value.present?
+          value = "-"
+        end
+
         data_type = options[:type].to_s.gsub(/^j+s+$/, "script") || "script"
         deletable_type = options[:deletable_type].to_s.gsub(/^j+s+$/, "script") || "script"
 
